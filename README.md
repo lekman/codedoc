@@ -1,2 +1,3 @@
 # codedoc
-Contains plugins and automations for automating developer documentation of code projects.
+
+Automating developer documentation generation using OpenAI.
