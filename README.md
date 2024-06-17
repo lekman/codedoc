@@ -14,6 +14,7 @@ Run the `CodeDoc: Generate Documentation` command to generate documentation for 
 
 - Open the command palette with `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS).
 - Type `CodeDoc: Generate Documentation` and press `Enter`.
+- If you have not created an [OpenAI token](https://platform.openai.com/account/api-keys), you will be prompted to do so.
 
 ## Configuration
 
