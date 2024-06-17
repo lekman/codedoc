@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
+// import fs from "fs";
 import { ISettings, Settings } from "../src/settings";
 import { Generator } from "../src/generator";
-import fs from "fs";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -50,8 +50,9 @@ describe("Generator", () => {
 	it("should generate a summary", async () => {
 		const result = await generator.generateSummary();
 
-		for (const file of result) {
-			console.log(file);
+		for (let index = 0; index < result.length; index += 1) {
+			const file = result[index];
+			expect(file).toBeDefined();
 		}
 
 		expect(result.length).toBeGreaterThan(0);

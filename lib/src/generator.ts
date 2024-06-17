@@ -1,6 +1,6 @@
 import { ISettings } from "./settings";
 import Files from "./files";
-import { Documenter } from "./documenter";
+// import { Documenter } from "./documenter";
 
 /**
  * Represents a generator interface.
@@ -61,8 +61,9 @@ export class Generator implements IGenerator {
 				this.settings.excludePatterns
 			)
 				.then((files) => {
-					const doc = new Documenter(this.settings);
-					console.dir(files);
+					// const doc = new Documenter(this.settings);
+					// console.dir(doc);
+					// console.dir(files);
 					resolve(files);
 				})
 				/* istanbul ignore next */

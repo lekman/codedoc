@@ -75,6 +75,10 @@ export class Settings implements ISettings {
 		return this._config.apiKey;
 	}
 
+	/**
+	 * Gets the chat model.
+	 * @returns The chat model.
+	 */
 	public get model(): ChatModel {
 		return this._config.model;
 	}
