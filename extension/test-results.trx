@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b21fede9-0893-4737-95d9-8ca89ca1f035" name="tobiaslekman@Tobias-MacBook.local 2024-06-16T15:26:28.597Z" runUser="tobiaslekman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Jest test run" id="6de74149-00df-4c43-a22e-b5d56f58a8e8"/>
+  <Times creation="2024-06-16T15:26:28.597Z" queuing="2024-06-16T15:26:28.597Z" start="2024-06-16T15:26:28.597Z" finish="2024-06-16T15:26:29.469Z"/>
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="0" failed="2" error="0"/>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Settings / should return the workspace configuration" id="71ae4b3f-6c0b-4930-b049-64408adf36e5" storage="test/settings.test.ts">
+      <Execution id="6daf6a98-b8ce-47b6-9231-99c7b0399db0"/>
+      <TestMethod codeBase="test/settings.test.ts" name="Settings / should return the workspace configuration" className="Settings"/>
+    </UnitTest>
+    <UnitTest name="Settings / should return the workspace configuration" id="82daf1eb-c96e-4be2-8c60-5708b539609a" storage="out/test/settings.test.js">
+      <Execution id="ab459a9d-ac11-4b19-8a65-fc8947148f91"/>
+      <TestMethod codeBase="out/test/settings.test.js" name="Settings / should return the workspace configuration" className="Settings"/>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda"/>
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="71ae4b3f-6c0b-4930-b049-64408adf36e5" executionId="6daf6a98-b8ce-47b6-9231-99c7b0399db0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="82daf1eb-c96e-4be2-8c60-5708b539609a" executionId="ab459a9d-ac11-4b19-8a65-fc8947148f91" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+  </TestEntries>
+  <Results>
+    <UnitTestResult testId="71ae4b3f-6c0b-4930-b049-64408adf36e5" executionId="6daf6a98-b8ce-47b6-9231-99c7b0399db0" testName="Settings / should return the workspace configuration" computerName="Tobias-MacBook.local" duration="00:00:00.004" startTime="2024-06-16T15:26:28.649Z" endTime="2024-06-16T15:26:28.649Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Error: [2mexpect([22m[31mreceived[39m[2m).[22mtoBe[2m([22m[32mexpected[39m[2m) // Object.is equality[22m
+
+Expected: [32m"0.5bk83gt33k5"[39m
+Received: [31m["apiKey"][39m
+    at Object.&lt;anonymous&gt; (/Users/tobiaslekman/Repo/codedoc/test/settings.test.ts:22:18)
+    at Promise.then.completed (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-runner/build/runTest.js:444:34)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="82daf1eb-c96e-4be2-8c60-5708b539609a" executionId="ab459a9d-ac11-4b19-8a65-fc8947148f91" testName="Settings / should return the workspace configuration" computerName="Tobias-MacBook.local" duration="00:00:00.008" startTime="2024-06-16T15:26:29.439Z" endTime="2024-06-16T15:26:29.439Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: settings.config.get is not a function
+    at Object.&lt;anonymous&gt; (/Users/tobiaslekman/Repo/codedoc/src/test/settings.test.ts:11:34)
+    at Promise.then.completed (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/tobiaslekman/Repo/codedoc/node_modules/jest-runner/build/runTest.js:444:34)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

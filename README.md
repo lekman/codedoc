@@ -1,2 +1,3 @@
 # codedoc
-Contains plugins and automations for automating developer documentation of code projects.
+
+A plugin for automating developer documentation generation in Visual Studio Code.
