@@ -3,11 +3,22 @@
  */
 export interface ISettings {
 	/**
-	 * Gets the workspace configuration parameter for the codedoc extension.
-	 * @param key - The key of the configuration parameter.
-	 * @returns The workspace configuration parameter for the codedoc extension.
+	 * Gets the API key.
+	 * @returns The API key as a string.
 	 */
-	config(key: string): string | string[] | undefined;
+	apiKey: string;
+
+	/**
+	 * Gets the include patterns.
+	 * @returns The include patterns as a string or string array.
+	 */
+	includePatterns: string | string[];
+
+	/**
+	 * Gets the exclude patterns.
+	 * @returns The exclude patterns as a string or string array.
+	 */
+	excludePatterns: string | string[];
 }
 
 /**
@@ -16,7 +27,7 @@ export interface ISettings {
 export class Settings implements ISettings {
 	// #region Private Fields
 
-	private _config: { [key: string]: string | string[] } | undefined;
+	private _config: ISettings;
 
 	// #endregion
 
@@ -24,21 +35,31 @@ export class Settings implements ISettings {
 	 * Private constructor to enforce singleton pattern.
 	 * @param config - The settings configuration for the codedoc extension.
 	 */
-	public constructor(config?: { [key: string]: string | string[] }) {
+	public constructor(config: ISettings) {
 		this._config = config;
 	}
 
 	/**
-	 * Gets the configuration for the codedoc extension.
-	 * @param key - The key of the configuration parameter.
-	 * @returns The workspace configuration for the codedoc extension.
+	 * Gets the API key.
+	 * @returns The API key as a string.
 	 */
-	public config(key: string): string | string[] | undefined {
-		if (!this._config) {
-			return undefined;
-		}
+	public get apiKey(): string {
+		return this._config.apiKey;
+	}
 
-		// Return the configuration value using the key, if it exists
-		return this._config[key];
+	/**
+	 * Gets the include patterns.
+	 * @returns The include patterns as a string or string array.
+	 */
+	public get includePatterns(): string | string[] {
+		return this._config.includePatterns;
+	}
+
+	/**
+	 * Gets the exclude patterns.
+	 * @returns The exclude patterns as a string or string array.
+	 */
+	public get excludePatterns(): string | string[] {
+		return this._config.excludePatterns;
 	}
 }

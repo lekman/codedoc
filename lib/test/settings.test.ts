@@ -10,20 +10,10 @@ describe("Settings", () => {
 		.substring(0, 30);
 
 	beforeEach(() => {
-		const config = { apiKey: randomString };
-		settings = new Settings(config);
+		settings = new Settings({ apiKey: randomString });
 	});
 
 	it("should return a string value for an existing configuration", () => {
-		expect(settings.config("apiKey")).toEqual(randomString);
-	});
-
-	it("should return undefined for non-existing configuration parameter", () => {
-		expect(settings.config("nonExistingKey")).toBeUndefined();
-	});
-
-	it("should return undefined for an undefined configuration", () => {
-		settings = new Settings();
-		expect(settings.config("apiKey")).toBeUndefined();
+		expect(settings.apiKey).toEqual(randomString);
 	});
 });
