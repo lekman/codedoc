@@ -39,7 +39,7 @@ jobs:
           fi
         shell: bash
 
-      - name: "Install dependencies without token"
+      - name: "Install dependencies"
         shell: bash
         working-directory: ${{ env.PROJECT_PATH }}
         run: |
@@ -49,3 +49,8 @@ jobs:
         shell: bash
         working-directory: ${{ env.PROJECT_PATH }}
         run: npm run build
+
+      - name: "Lint"
+        shell: bash
+        working-directory: ${{ env.PROJECT_PATH }}
+        run: npm run lint --if-present
