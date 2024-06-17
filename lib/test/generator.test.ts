@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
-import OpenAI from "openai";
 import { ISettings, Settings } from "../src/settings";
-import Generator from "../src/generator";
+import { Generator } from "../src/generator";
+import fs from "fs";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -13,17 +13,19 @@ describe("Generator", () => {
 	// Use an environment variable
 	const apiKey = process.env.API_KEY ?? "defaultApiKey";
 
-	const blankConfig = {
+	const blankConfig: ISettings = {
 		apiKey: "",
 		includePatterns: [],
 		excludePatterns: [],
+		model: "gpt-4o",
 	};
 
 	beforeEach(() => {
-		const config = {
+		const config: ISettings = {
 			apiKey,
 			includePatterns: ["**/*.ts"],
 			excludePatterns: ["**/node_modules/**", "**/out/**", "**/dist/**"],
+			model: "gpt-4o",
 		};
 		settings = new Settings(config);
 		generator = new Generator(settings);

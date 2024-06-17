@@ -10,10 +10,19 @@ describe("Settings", () => {
 		.substring(0, 30);
 
 	beforeEach(() => {
-		settings = new Settings({ apiKey: randomString });
+		settings = new Settings({
+			apiKey: randomString,
+			includePatterns: ["**/*.ts"],
+			excludePatterns: ["**/node_modules/**", "**/out/**", "**/dist/**"],
+			model: "gpt-4o",
+		});
 	});
 
 	it("should return a string value for an existing configuration", () => {
 		expect(settings.apiKey).toEqual(randomString);
+	});
+
+	it("should return the correct model value", () => {
+		expect(settings.model).toEqual("gpt-4o");
 	});
 });

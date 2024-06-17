@@ -6,8 +6,8 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
+		"build": "tsc -p ./ && cp ./src/*.md ./out",
+		"watch": "tsc -watch -p ./ && cp ./src/*.md ./out",
 		"test": "tsc -p ./ && jest --detectOpenHandles --passWithNoTests --collectCoverage=true",
 		"test:coverage": "jest --detectOpenHandles --passWithNoTests --collectCoverage=true",
 		"test:debug": "jest --watchAll --detectOpenHandles --passWithNoTests --collectCoverage=true",

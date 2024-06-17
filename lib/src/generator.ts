@@ -1,7 +1,6 @@
 import { ISettings } from "./settings";
 import Files from "./files";
-import fs from "fs";
-import path from "path";
+import { Documenter } from "./documenter";
 
 /**
  * Represents a generator interface.
@@ -24,7 +23,7 @@ export interface IGenerator {
 /**
  * Represents a Generator that is responsible for generating documentation.
  */
-export default class Generator implements IGenerator {
+export class Generator implements IGenerator {
 	// #region Private Fields
 
 	private settings: ISettings;
@@ -62,12 +61,14 @@ export default class Generator implements IGenerator {
 				this.settings.excludePatterns
 			)
 				.then((files) => {
-					console.log("woo");
+					const doc = new Documenter(this.settings);
 					console.dir(files);
 					resolve(files);
 				})
+				/* istanbul ignore next */
 				.catch((error) => {
-					throw new Error(error);
+					/* istanbul ignore next */
+					reject(error);
 				});
 		});
 	}
