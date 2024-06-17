@@ -396,3 +396,16 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Local VSCode settings
+.vscode/
+
+# JUnit test reports and coverage
+coverage
+
+# Local environment file for debugging
+.env
+test-results.trx
+
+# Compiled output 
+**/out/*

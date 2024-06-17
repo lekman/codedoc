@@ -1,3 +1,3 @@
 # codedoc
 
-Automating developer documentation generation using OpenAI.
+A plugin for automating developer documentation generation in Visual Studio Code.
