@@ -30,7 +30,7 @@ jobs:
         shell: bash
         working-directory: ${{ env.PROJECT_PATH }}
         run: |
-          npm install
+          npm ci
       - name: "Build"
         shell: bash
         working-directory: ${{ env.PROJECT_PATH }}
