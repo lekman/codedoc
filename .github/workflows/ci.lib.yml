@@ -1,7 +1,12 @@
-name: "CI Checks"
+name: "CI Checks for Library"
 on:
   workflow_dispatch:
   push:
+    paths:
+      - "lib/**"
+      - ".github/workflows/ci.lib.yml"
+env:
+  PROJECT_PATH: "./lib"
 jobs:
   check:
     name: "Build Verification, Audit and Unit Tests"
@@ -19,7 +24,7 @@ jobs:
           node-version: "20.x"
       - name: "Audit library"
         id: audit
-        working-directory: ./lib
+        working-directory: ${{ env.PROJECT_PATH }}
         run: |
           npm i --package-lock-only
           audit_result=$(npm audit --omit=dev --json)
@@ -33,3 +38,14 @@ jobs:
             echo "No vulnerabilities found above 'low' severity."
           fi
         shell: bash
+
+      - name: "Install dependencies without token"
+        shell: bash
+        working-directory: ${{ env.PROJECT_PATH }}
+        run: |
+          npm install
+
+      - name: "Build"
+        shell: bash
+        working-directory: ${{ env.PROJECT_PATH }}
+        run: npm run build
