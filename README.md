@@ -23,8 +23,15 @@ TODO.
 
 The `codedoc` command-line tool can be used to generate documentation for any project.
 
+Create an `.npmrc` file in the root of the project with the following content:
+
+```plaintext
+@lekman:registry=https://npm.pkg.github.com
+always-auth=true
+```
+
 Install the tool from npmjs:
 
 ```bash
-npm install codedoc
+npm install @lekman/codedoc
 ```
