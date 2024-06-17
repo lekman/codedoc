@@ -54,3 +54,16 @@ jobs:
         shell: bash
         working-directory: ${{ env.PROJECT_PATH }}
         run: npm run lint --if-present
+
+      - name: "Unit Tests"
+        shell: bash
+        working-directory: ${{ env.PROJECT_PATH }}
+        run: npm run test:coverage --if-present
+
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure() # run this step even if previous step failed
+        with:
+          name: JEST Tests
+          path: ${{ env.PROJECT_PATH }}/coverage/junit.xml
+          reporter: jest-junit
