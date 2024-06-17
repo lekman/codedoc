@@ -42,8 +42,5 @@
 		"dotenv": "^16.4.5",
 		"glob": "^10.4.1",
 		"openai": "^4.51.0"
-	},
-    "resolutions": {
-        "minimist": "1.2.6"
-    }
+	}
 }
