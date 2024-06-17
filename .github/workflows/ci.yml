@@ -7,9 +7,9 @@ jobs:
     name: "Build Verification and Unit Tests"
     runs-on: ubuntu-latest
     permissions:
-        contents: read
-        packages: write
-        pull-requests: write
+      contents: read
+      packages: write
+      pull-requests: write
     steps:
-    - name: "Checkout"
+      - name: Checkout
         uses: actions/checkout@v4
