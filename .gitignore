@@ -405,6 +405,7 @@ coverage
 
 # Local environment file for debugging
 .env
+test-results.trx
 
-# Compiled output
+# Compiled output 
 **/out/*

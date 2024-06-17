@@ -1,4 +1,7 @@
 import { ISettings } from "./settings";
+import Files from "./files";
+import fs from "fs";
+import path from "path";
 
 /**
  * Represents a generator interface.
@@ -41,13 +44,31 @@ export default class Generator implements IGenerator {
 	 * @returns A boolean indicating whether the Generator has an API key configured.
 	 */
 	public get hasApiKey(): boolean {
-		return !!this.settings.config("apiKey");
+		return !!this.settings.apiKey;
 	}
 
 	/**
 	 * Generates a documentation summary.
 	 */
-	public generateSummary(): void {
-		// TODO: Implement feature here
+	public async generateSummary(): Promise<string[]> {
+		if (!this.hasApiKey) {
+			throw new Error("API key is required to generate a summary.");
+		}
+
+		return new Promise((resolve, reject) => {
+			// Call files and return the result, or handle an error
+			Files.getFiles(
+				this.settings.includePatterns,
+				this.settings.excludePatterns
+			)
+				.then((files) => {
+					console.log("woo");
+					console.dir(files);
+					resolve(files);
+				})
+				.catch((error) => {
+					throw new Error(error);
+				});
+		});
 	}
 }

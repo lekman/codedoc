@@ -1,46 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="e7d2a83e-45be-43e4-955c-722bd0624225" name="tobiaslekman@Tobias-MacBook.local 2024-06-17T11:22:09.507Z" runUser="tobiaslekman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <TestSettings name="Jest test run" id="ad7400a0-b644-4635-ad88-5c5fc5153ac5"/>
-  <Times creation="2024-06-17T11:22:09.507Z" queuing="2024-06-17T11:22:09.507Z" start="2024-06-17T11:22:09.507Z" finish="2024-06-17T11:22:10.475Z"/>
+<TestRun id="5774ba25-b4fc-4ce1-8ec5-31e13d375622" name="tobiaslekman@Tobias-MacBook.local 2024-06-17T12:46:05.907Z" runUser="tobiaslekman" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Jest test run" id="88f94cdc-475b-4c55-a075-bb00a88dc7ec"/>
+  <Times creation="2024-06-17T12:46:05.907Z" queuing="2024-06-17T12:46:05.907Z" start="2024-06-17T12:46:05.907Z" finish="2024-06-17T12:46:07.485Z"/>
   <ResultSummary outcome="Passed">
-    <Counters total="9" executed="9" passed="9" failed="0" error="0"/>
+    <Counters total="8" executed="8" passed="8" failed="0" error="0"/>
   </ResultSummary>
   <TestDefinitions>
-    <UnitTest name="Generator / should have an API key when configured" id="1ff2265b-3c30-404e-bf49-f37dbf0d5ca9" storage="test/generator.test.js">
-      <Execution id="c965714b-c3cc-4ed8-8cb5-6a851ba92106"/>
-      <TestMethod codeBase="test/generator.test.js" name="Generator / should have an API key when configured" className="Generator"/>
+    <UnitTest name="Files / getFiles / should retrieve a list of files that match the include patterns" id="87fefc77-3723-42a1-836c-3fe1c09bbc9e" storage="test/files.test.ts">
+      <Execution id="36f5bf43-9f7f-407e-b18b-90ebfb62bd1e"/>
+      <TestMethod codeBase="test/files.test.ts" name="Files / getFiles / should retrieve a list of files that match the include patterns" className="Files"/>
     </UnitTest>
-    <UnitTest name="Generator / should not have an API key when not configured" id="49dfc20e-4755-4bab-9d72-39e852154329" storage="test/generator.test.js">
-      <Execution id="82145a43-f421-4e88-8d1d-cd9aa17760f3"/>
-      <TestMethod codeBase="test/generator.test.js" name="Generator / should not have an API key when not configured" className="Generator"/>
+    <UnitTest name="Files / getFiles / should exclude files that match the exclude patterns" id="6fc4185d-31f3-45bf-bd14-bf5ddcdfdd9a" storage="test/files.test.ts">
+      <Execution id="7eded27b-f337-492c-b70a-a5a17dcb2f76"/>
+      <TestMethod codeBase="test/files.test.ts" name="Files / getFiles / should exclude files that match the exclude patterns" className="Files"/>
     </UnitTest>
-    <UnitTest name="Generator / should generate a summary" id="8fd5c98c-801b-4a73-be8e-54020d98a0b1" storage="test/generator.test.js">
-      <Execution id="876f2e8b-79b1-47af-80a9-99109a4a59ef"/>
-      <TestMethod codeBase="test/generator.test.js" name="Generator / should generate a summary" className="Generator"/>
+    <UnitTest name="Files / getFiles / should return an empty array if no files match the include patterns" id="f0ab8891-a542-4d4a-bf17-00f9dd6e58f2" storage="test/files.test.ts">
+      <Execution id="48a70314-98bc-4267-b4df-064d0cf998ca"/>
+      <TestMethod codeBase="test/files.test.ts" name="Files / getFiles / should return an empty array if no files match the include patterns" className="Files"/>
     </UnitTest>
-    <UnitTest name="Generator / should have an API key when configured" id="818e36d3-b9b4-44eb-b59f-56e1ff937753" storage="test/generator.test.ts">
-      <Execution id="50b3cbbf-b891-49b4-8713-0a2dc87a8c8e"/>
+    <UnitTest name="Generator / should have an API key when configured" id="8c9abb4e-7c67-434a-87eb-61f7d1e8058d" storage="test/generator.test.ts">
+      <Execution id="764f92e8-3fe2-47ef-87d0-82ba98e6bd52"/>
       <TestMethod codeBase="test/generator.test.ts" name="Generator / should have an API key when configured" className="Generator"/>
     </UnitTest>
-    <UnitTest name="Generator / should not have an API key when not configured" id="185b83d3-b996-42c9-8be8-c6a4821474c3" storage="test/generator.test.ts">
-      <Execution id="d2864198-131f-4fe7-99cb-266c3dca439c"/>
+    <UnitTest name="Generator / should not have an API key when not configured" id="8f09c877-6b3f-4872-b40d-c005bc6d5dad" storage="test/generator.test.ts">
+      <Execution id="a96412b6-b22b-4452-9f05-538f2402c4c6"/>
       <TestMethod codeBase="test/generator.test.ts" name="Generator / should not have an API key when not configured" className="Generator"/>
     </UnitTest>
-    <UnitTest name="Generator / should generate a summary" id="9c6e4669-b29d-40a3-b7ef-3641346c71a2" storage="test/generator.test.ts">
-      <Execution id="8037fcd7-ec75-478a-a6c1-719e2da21d61"/>
+    <UnitTest name="Generator / generateSummary throws an exception for missing API key" id="e2de1694-845c-4d28-883c-3a84c6fd184b" storage="test/generator.test.ts">
+      <Execution id="cacaf5e1-ef36-49a1-b319-0c0c596783b3"/>
+      <TestMethod codeBase="test/generator.test.ts" name="Generator / generateSummary throws an exception for missing API key" className="Generator"/>
+    </UnitTest>
+    <UnitTest name="Generator / should generate a summary" id="76850eb0-bc28-4c45-8fbe-dce105ec29b5" storage="test/generator.test.ts">
+      <Execution id="f76de654-2436-4573-8b77-8141c9b87085"/>
       <TestMethod codeBase="test/generator.test.ts" name="Generator / should generate a summary" className="Generator"/>
     </UnitTest>
-    <UnitTest name="Settings / should return a string value for an existing configuration" id="fd482117-8344-42e8-8414-77bbd266c229" storage="test/settings.test.ts">
-      <Execution id="c3815e7a-3333-43e4-9916-dba416ae6779"/>
+    <UnitTest name="Settings / should return a string value for an existing configuration" id="35eaf308-2e4d-44b4-b61e-d6c15d8a0c51" storage="test/settings.test.ts">
+      <Execution id="c3d341f3-cdce-466a-9910-3e133e05ceb4"/>
       <TestMethod codeBase="test/settings.test.ts" name="Settings / should return a string value for an existing configuration" className="Settings"/>
-    </UnitTest>
-    <UnitTest name="Settings / should return undefined for non-existing configuration parameter" id="a84b7386-9924-4a86-b5c1-46e7e8034a77" storage="test/settings.test.ts">
-      <Execution id="7864091f-5ad3-4661-9159-0f09b2136869"/>
-      <TestMethod codeBase="test/settings.test.ts" name="Settings / should return undefined for non-existing configuration parameter" className="Settings"/>
-    </UnitTest>
-    <UnitTest name="Settings / should return undefined for an undefined configuration" id="28996a09-c129-49d9-8165-0d59d650b6fd" storage="test/settings.test.ts">
-      <Execution id="d37066b5-0242-48cc-ba5c-7b5d9a6d24e5"/>
-      <TestMethod codeBase="test/settings.test.ts" name="Settings / should return undefined for an undefined configuration" className="Settings"/>
     </UnitTest>
   </TestDefinitions>
   <TestLists>
@@ -48,25 +44,23 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda"/>
   </TestLists>
   <TestEntries>
-    <TestEntry testId="1ff2265b-3c30-404e-bf49-f37dbf0d5ca9" executionId="c965714b-c3cc-4ed8-8cb5-6a851ba92106" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="49dfc20e-4755-4bab-9d72-39e852154329" executionId="82145a43-f421-4e88-8d1d-cd9aa17760f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="8fd5c98c-801b-4a73-be8e-54020d98a0b1" executionId="876f2e8b-79b1-47af-80a9-99109a4a59ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="818e36d3-b9b4-44eb-b59f-56e1ff937753" executionId="50b3cbbf-b891-49b4-8713-0a2dc87a8c8e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="185b83d3-b996-42c9-8be8-c6a4821474c3" executionId="d2864198-131f-4fe7-99cb-266c3dca439c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="9c6e4669-b29d-40a3-b7ef-3641346c71a2" executionId="8037fcd7-ec75-478a-a6c1-719e2da21d61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="fd482117-8344-42e8-8414-77bbd266c229" executionId="c3815e7a-3333-43e4-9916-dba416ae6779" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="a84b7386-9924-4a86-b5c1-46e7e8034a77" executionId="7864091f-5ad3-4661-9159-0f09b2136869" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="28996a09-c129-49d9-8165-0d59d650b6fd" executionId="d37066b5-0242-48cc-ba5c-7b5d9a6d24e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="87fefc77-3723-42a1-836c-3fe1c09bbc9e" executionId="36f5bf43-9f7f-407e-b18b-90ebfb62bd1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="6fc4185d-31f3-45bf-bd14-bf5ddcdfdd9a" executionId="7eded27b-f337-492c-b70a-a5a17dcb2f76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="f0ab8891-a542-4d4a-bf17-00f9dd6e58f2" executionId="48a70314-98bc-4267-b4df-064d0cf998ca" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8c9abb4e-7c67-434a-87eb-61f7d1e8058d" executionId="764f92e8-3fe2-47ef-87d0-82ba98e6bd52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8f09c877-6b3f-4872-b40d-c005bc6d5dad" executionId="a96412b6-b22b-4452-9f05-538f2402c4c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="e2de1694-845c-4d28-883c-3a84c6fd184b" executionId="cacaf5e1-ef36-49a1-b319-0c0c596783b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="76850eb0-bc28-4c45-8fbe-dce105ec29b5" executionId="f76de654-2436-4573-8b77-8141c9b87085" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="35eaf308-2e4d-44b4-b61e-d6c15d8a0c51" executionId="c3d341f3-cdce-466a-9910-3e133e05ceb4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
   </TestEntries>
   <Results>
-    <UnitTestResult testId="1ff2265b-3c30-404e-bf49-f37dbf0d5ca9" executionId="c965714b-c3cc-4ed8-8cb5-6a851ba92106" testName="Generator / should have an API key when configured" computerName="Tobias-MacBook.local" duration="00:00:00.002" startTime="2024-06-17T11:22:09.556Z" endTime="2024-06-17T11:22:09.556Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="49dfc20e-4755-4bab-9d72-39e852154329" executionId="82145a43-f421-4e88-8d1d-cd9aa17760f3" testName="Generator / should not have an API key when not configured" computerName="Tobias-MacBook.local" duration="00:00:00.000" startTime="2024-06-17T11:22:09.556Z" endTime="2024-06-17T11:22:09.558Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="8fd5c98c-801b-4a73-be8e-54020d98a0b1" executionId="876f2e8b-79b1-47af-80a9-99109a4a59ef" testName="Generator / should generate a summary" computerName="Tobias-MacBook.local" duration="00:00:00.001" startTime="2024-06-17T11:22:09.556Z" endTime="2024-06-17T11:22:09.558Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="818e36d3-b9b4-44eb-b59f-56e1ff937753" executionId="50b3cbbf-b891-49b4-8713-0a2dc87a8c8e" testName="Generator / should have an API key when configured" computerName="Tobias-MacBook.local" duration="00:00:00.001" startTime="2024-06-17T11:22:10.441Z" endTime="2024-06-17T11:22:10.441Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="185b83d3-b996-42c9-8be8-c6a4821474c3" executionId="d2864198-131f-4fe7-99cb-266c3dca439c" testName="Generator / should not have an API key when not configured" computerName="Tobias-MacBook.local" duration="00:00:00.001" startTime="2024-06-17T11:22:10.441Z" endTime="2024-06-17T11:22:10.442Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="9c6e4669-b29d-40a3-b7ef-3641346c71a2" executionId="8037fcd7-ec75-478a-a6c1-719e2da21d61" testName="Generator / should generate a summary" computerName="Tobias-MacBook.local" duration="00:00:00.000" startTime="2024-06-17T11:22:10.441Z" endTime="2024-06-17T11:22:10.443Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="fd482117-8344-42e8-8414-77bbd266c229" executionId="c3815e7a-3333-43e4-9916-dba416ae6779" testName="Settings / should return a string value for an existing configuration" computerName="Tobias-MacBook.local" duration="00:00:00.001" startTime="2024-06-17T11:22:10.536Z" endTime="2024-06-17T11:22:10.536Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="a84b7386-9924-4a86-b5c1-46e7e8034a77" executionId="7864091f-5ad3-4661-9159-0f09b2136869" testName="Settings / should return undefined for non-existing configuration parameter" computerName="Tobias-MacBook.local" duration="00:00:00.000" startTime="2024-06-17T11:22:10.536Z" endTime="2024-06-17T11:22:10.537Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="28996a09-c129-49d9-8165-0d59d650b6fd" executionId="d37066b5-0242-48cc-ba5c-7b5d9a6d24e5" testName="Settings / should return undefined for an undefined configuration" computerName="Tobias-MacBook.local" duration="00:00:00.001" startTime="2024-06-17T11:22:10.536Z" endTime="2024-06-17T11:22:10.537Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="87fefc77-3723-42a1-836c-3fe1c09bbc9e" executionId="36f5bf43-9f7f-407e-b18b-90ebfb62bd1e" testName="Files / getFiles / should retrieve a list of files that match the include patterns" computerName="Tobias-MacBook.local" duration="00:00:00.054" startTime="2024-06-17T12:46:05.954Z" endTime="2024-06-17T12:46:05.954Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="6fc4185d-31f3-45bf-bd14-bf5ddcdfdd9a" executionId="7eded27b-f337-492c-b70a-a5a17dcb2f76" testName="Files / getFiles / should exclude files that match the exclude patterns" computerName="Tobias-MacBook.local" duration="00:00:00.011" startTime="2024-06-17T12:46:05.954Z" endTime="2024-06-17T12:46:06.008Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="f0ab8891-a542-4d4a-bf17-00f9dd6e58f2" executionId="48a70314-98bc-4267-b4df-064d0cf998ca" testName="Files / getFiles / should return an empty array if no files match the include patterns" computerName="Tobias-MacBook.local" duration="00:00:00.251" startTime="2024-06-17T12:46:05.954Z" endTime="2024-06-17T12:46:06.019Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8c9abb4e-7c67-434a-87eb-61f7d1e8058d" executionId="764f92e8-3fe2-47ef-87d0-82ba98e6bd52" testName="Generator / should have an API key when configured" computerName="Tobias-MacBook.local" duration="00:00:00.000" startTime="2024-06-17T12:46:07.346Z" endTime="2024-06-17T12:46:07.346Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8f09c877-6b3f-4872-b40d-c005bc6d5dad" executionId="a96412b6-b22b-4452-9f05-538f2402c4c6" testName="Generator / should not have an API key when not configured" computerName="Tobias-MacBook.local" duration="00:00:00.000" startTime="2024-06-17T12:46:07.346Z" endTime="2024-06-17T12:46:07.346Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="e2de1694-845c-4d28-883c-3a84c6fd184b" executionId="cacaf5e1-ef36-49a1-b319-0c0c596783b3" testName="Generator / generateSummary throws an exception for missing API key" computerName="Tobias-MacBook.local" duration="00:00:00.005" startTime="2024-06-17T12:46:07.346Z" endTime="2024-06-17T12:46:07.346Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="76850eb0-bc28-4c45-8fbe-dce105ec29b5" executionId="f76de654-2436-4573-8b77-8141c9b87085" testName="Generator / should generate a summary" computerName="Tobias-MacBook.local" duration="00:00:00.006" startTime="2024-06-17T12:46:07.346Z" endTime="2024-06-17T12:46:07.351Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="35eaf308-2e4d-44b4-b61e-d6c15d8a0c51" executionId="c3d341f3-cdce-466a-9910-3e133e05ceb4" testName="Settings / should return a string value for an existing configuration" computerName="Tobias-MacBook.local" duration="00:00:00.001" startTime="2024-06-17T12:46:07.529Z" endTime="2024-06-17T12:46:07.529Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
   </Results>
 </TestRun>

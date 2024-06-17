@@ -1,6 +1,7 @@
+import dotenv from "dotenv";
+import OpenAI from "openai";
 import { ISettings, Settings } from "../src/settings";
 import Generator from "../src/generator";
-import dotenv from "dotenv";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -12,10 +13,18 @@ describe("Generator", () => {
 	// Use an environment variable
 	const apiKey = process.env.API_KEY ?? "defaultApiKey";
 
-	console.log(`API key: ${apiKey}`);
+	const blankConfig = {
+		apiKey: "",
+		includePatterns: [],
+		excludePatterns: [],
+	};
 
 	beforeEach(() => {
-		const config = { apiKey };
+		const config = {
+			apiKey,
+			includePatterns: ["**/*.ts"],
+			excludePatterns: ["**/node_modules/**", "**/out/**", "**/dist/**"],
+		};
 		settings = new Settings(config);
 		generator = new Generator(settings);
 	});
@@ -25,11 +34,25 @@ describe("Generator", () => {
 	});
 
 	it("should not have an API key when not configured", () => {
-		generator = new Generator(new Settings({}));
+		generator = new Generator(new Settings(blankConfig));
 		expect(generator.hasApiKey).toBe(false);
 	});
 
-	it("should generate a summary", () => {
-		// TODO: Implement test for generateSummary method
+	test("generateSummary throws an exception for missing API key", async () => {
+		generator = new Generator(new Settings(blankConfig));
+		return expect(generator.generateSummary()).rejects.toThrow(
+			"API key is required to generate a summary."
+		);
 	});
+
+	it("should generate a summary", async () => {
+		const result = await generator.generateSummary();
+
+		for (const file of result) {
+			console.log(file);
+		}
+
+		expect(result.length).toBeGreaterThan(0);
+		expect(result).toBeDefined();
+	}, 999999); // Increase timeout to 999999 ms
 });
