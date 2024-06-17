@@ -4,7 +4,7 @@ on:
   push:
 jobs:
   check:
-    name: "Build Verification and Unit Tests"
+    name: "Build Verification, Audit and Unit Tests"
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -13,3 +13,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+      - name: "Audit library"
+        id: audit
+        working-directory: ./lib
+        run: |
+          npm i --package-lock-only
+          audit_result=$(npm audit --omit=dev --json)
+          if [[ $(echo $audit_result | jq -r '.metadata.vulnerabilities.moderate') != "0" || \
+                $(echo $audit_result | jq -r '.metadata.vulnerabilities.high') != "0" || \
+                $(echo $audit_result | jq -r '.metadata.vulnerabilities.critical') != "0" ]]; then
+            echo "Found vulnerabilities above 'low' severity. Stopping workflow."
+            echo $audit_result | jq -r '.metadata.vulnerabilities' 
+            exit 1
+          else
+            echo "No vulnerabilities found above 'low' severity."
+          fi
+        shell: bash
