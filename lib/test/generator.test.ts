@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { describe, it, expect, beforeEach } from "@jest/globals";
 // import fs from "fs";
 import { ISettings, Settings } from "../src/settings";
 import { Generator } from "../src/generator";
@@ -40,7 +41,7 @@ describe("Generator", () => {
 		expect(generator.hasApiKey).toBe(false);
 	});
 
-	test("generateSummary throws an exception for missing API key", async () => {
+	it("generateSummary should throw an exception for missing API key", async () => {
 		generator = new Generator(new Settings(blankConfig));
 		return expect(generator.generateSummary()).rejects.toThrow(
 			"API key is required to generate a summary."

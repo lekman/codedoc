@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import generator from "../../lib/src/generator";
+import generator from "@lekman/codedoc";
 
 /**
  * Class responsible for registering the document command and handling missing API key.
